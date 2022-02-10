@@ -23,14 +23,41 @@
     gap: 2rem;
     h1 {
       font-size: 4rem;
+      animation: titleTop 2s;
     }
     h2 {
       font-size: 3rem;
+      animation: titleBottom 2s;
     }
     button {
       padding: 1rem;
       border-radius: 2rem;
       border: none;
+      animation: btn 2s;
     }
+  }
+}
+@keyframes titleTop {
+  0% {
+    transform: translate(-200%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes titleBottom {
+  0% {
+    transform: translate(200%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes btn {
+  0% {
+    transform: translate(0, 500%);
+  }
+  100% {
+    transform: translate(0);
   }
 }

@@ -21,10 +21,31 @@
     letter-spacing: 1rem;
     gap: 2rem; }
     .box__main .box__main1 h1 {
-      font-size: 4rem; }
+      font-size: 4rem;
+      animation: titleTop 2s; }
     .box__main .box__main1 h2 {
-      font-size: 3rem; }
+      font-size: 3rem;
+      animation: titleBottom 2s; }
     .box__main .box__main1 button {
       padding: 1rem;
       border-radius: 2rem;
-      border: none; }
+      border: none;
+      animation: btn 2s; }
+
+@keyframes titleTop {
+  0% {
+    transform: translate(-200%); }
+  100% {
+    transform: translate(0); } }
+
+@keyframes titleBottom {
+  0% {
+    transform: translate(200%); }
+  100% {
+    transform: translate(0); } }
+
+@keyframes btn {
+  0% {
+    transform: translate(0, 500%); }
+  100% {
+    transform: translate(0); } }
