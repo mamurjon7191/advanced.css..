@@ -2,8 +2,17 @@
   margin: 0;
   padding: 0;
 }
+/* 
+COLORS:
+
+LightGreen: #7ed56f
+MediumGreen: #55c57a
+DarkGreen: #28b485
+
+*/
 .box__main {
-  background-image: url(img/hero.jpg);
+  background-image: linear-gradient(to top left, #7ed56f71, #55c57a79),
+    url(img/hero.jpg);
   width: 100%;
   height: 100vh;
   color: white;
@@ -34,6 +43,20 @@
       border-radius: 2rem;
       border: none;
       animation: btn 2s;
+      position: relative;
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: black;
+        top: 0;
+        left: 0;
+        border-radius: 2rem;
+        background-color: white;
+        z-index: -1;
+        animation: btn_1 1s infinite linear;
+      }
     }
   }
 }
@@ -59,5 +82,15 @@
   }
   100% {
     transform: translate(0);
+  }
+}
+@keyframes btn_1 {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
   }
 }
